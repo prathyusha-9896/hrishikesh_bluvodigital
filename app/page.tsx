@@ -34,8 +34,8 @@ export default function Home() {
         <Community/>
         <DiscoverRishikesh/>
         <InfiniteScrollBanner/>
-        <Footer/>
         <Faqs/>
+        <Footer/>
         {/* Add more sections here */}
       </main>
     </>

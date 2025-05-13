@@ -12,13 +12,12 @@ const images = [
   '/Images/img5.png',
   '/Images/img6.png',
   '/Images/img7.png',
-  '/Images/img8.png',
   '/Images/img2.png',
   '/Images/img3.png',
 ];
 
 export default function ImageSwiper() {
-  const duplicatedImages = [...images, ...images, ...images]; // Duplicate to avoid blank gap
+  const duplicatedImages = [...images, ...images, ...images, ]; // Duplicate to avoid blank gap
 
   return (
     <div className="swiper curved-swiper">
