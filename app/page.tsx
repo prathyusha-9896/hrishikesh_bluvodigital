@@ -1,23 +1,22 @@
 'use client';
-import AlumniExperiences from '@/components/AlumniExperiences';
-import Community from '@/components/Community';
-import CuriousToExplore from '@/components/CuriousToExplore';
-import DiscoverRishikesh from '@/components/discoverrishikesh/DiscoverRishikesh';
-import GlimpsesGallery from '@/components/GlimpsesGallery';
-//import Header from '@/components/Header';
-import ImageShowcase from '@/components/ImageShowcase';
-import InfiniteScrollBanner from '@/components/InfiniteScrollBanner';
-import ProudlyCertified from '@/components/proudlycertified/ProudlyCertified';
-import RetreatPrograms from '@/components/RetreatPrograms';
-import HeroSection from '@/components/YogaAlliance';
-import YogaJourney from '@/components/YogaJourney';
-import YogaPrograms from '@/components/YogaPrograms';
-import YogicWisdomCarousel from '@/components/YogicWisdomCarousel';
-import FAQS from '@/components/faqs/FAQS';
-import useFAQS from '@/components/faqs/useFAQS';
-import Footer from '@/components/Footer';
+import dynamic from 'next/dynamic';
+
+const AlumniExperiences = dynamic(() => import('@/components/AlumniExperiences'), { ssr: false });
+const Community = dynamic(() => import('@/components/Community'), { ssr: false });
+const CuriousToExplore = dynamic(() => import('@/components/CuriousToExplore'), { ssr: false });
+const DiscoverRishikesh = dynamic(() => import('@/components/discoverrishikesh/DiscoverRishikesh'), { ssr: false });
+const GlimpsesGallery = dynamic(() => import('@/components/GlimpsesGallery'), { ssr: false });
+const ImageShowcase = dynamic(() => import('@/components/ImageShowcase'), { ssr: false });
+const InfiniteScrollBanner = dynamic(() => import('@/components/InfiniteScrollBanner'), { ssr: false });
+const ProudlyCertified = dynamic(() => import('@/components/proudlycertified/ProudlyCertified'), { ssr: false });
+const RetreatPrograms = dynamic(() => import('@/components/RetreatPrograms'), { ssr: false });
+const HeroSection = dynamic(() => import('@/components/YogaAlliance'), { ssr: false });
+const YogaJourney = dynamic(() => import('@/components/YogaJourney'), { ssr: false });
+const YogaPrograms = dynamic(() => import('@/components/YogaPrograms'), { ssr: false });
+const YogicWisdomCarousel = dynamic(() => import('@/components/YogicWisdomCarousel'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+
 export default function Home() {
-  const data = useFAQS();
   return (
     <>
       <main>
@@ -34,7 +33,6 @@ export default function Home() {
         <Community/>
         <DiscoverRishikesh/>
         <InfiniteScrollBanner/>
-        <FAQS data={data} />
         <Footer/>
         {/* Add more sections here */}
       </main>
