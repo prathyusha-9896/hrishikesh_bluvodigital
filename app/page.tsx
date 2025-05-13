@@ -10,18 +10,18 @@ const ImageShowcase = dynamic(() => import('@/components/ImageShowcase'), { ssr:
 const InfiniteScrollBanner = dynamic(() => import('@/components/InfiniteScrollBanner'), { ssr: false });
 const ProudlyCertified = dynamic(() => import('@/components/proudlycertified/ProudlyCertified'), { ssr: false });
 const RetreatPrograms = dynamic(() => import('@/components/RetreatPrograms'), { ssr: false });
-const HeroSection = dynamic(() => import('@/components/YogaAlliance'), { ssr: false });
+const YogaAlliance = dynamic(() => import('@/components/YogaAlliance'), { ssr: false });
 const YogaJourney = dynamic(() => import('@/components/YogaJourney'), { ssr: false });
 const YogaPrograms = dynamic(() => import('@/components/YogaPrograms'), { ssr: false });
 const YogicWisdomCarousel = dynamic(() => import('@/components/YogicWisdomCarousel'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
-const Faqs = dynamic(() => import('@/components/FAQS'), { ssr: false });
+const Faqs = dynamic(() => import('@/components/Faqs'), { ssr: false });
 
 export default function Home() {
   return (
     <>
       <main>
-        <HeroSection />
+        <YogaAlliance />
         <ImageShowcase />
         <ProudlyCertified/>
         <YogaJourney/>
