@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {  
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'TTRamillas', sans-serif;
+}
+.comme-font {
+  font-family: var(--font-comme);
+}
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('/TTRamillas-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('/fonts/TTRamillas-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.swiper {
+  overflow: hidden;
+  position: relative;
+  --v-offset: 60px;
+  --curve-height: 120px;
+}
+
+.curved-swiper::before,
+.curved-swiper::after {
+  content: "";
+  z-index: 10;
+  display: block;
+  background: white;
+  width: calc(100vw + 2 * var(--v-offset));
+  height: var(--curve-height);
+  position: absolute;
+  border-radius: 45%;
+  left: calc(-1 * var(--v-offset));
+  right: calc(-1 * var(--v-offset));
+}
+
+.curved-swiper::before {
+  top: calc(-0.7 * var(--curve-height));
+}
+
+.curved-swiper::after {
+  bottom: calc(-0.7 * var(--curve-height));
+}
+
+.image-slide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .image-slide {
+    height: 260px;
+    width: 360px; 
+   }
+
+  .curved-swiper::before,
+.curved-swiper::after {
+  content: "";
+  z-index: 10;
+  display: block;
+  background: white;
+  width: calc(100vw + 2 * var(--v-offset));
+  height: var(--curve-height);
+  position: absolute;
+  left: calc(-1 * var(--v-offset));
+  right: calc(-1 * var(--v-offset));
+}
+
+.curved-swiper::before {
+  top: calc(-1 * var(--curve-height));
+}
+
+.curved-swiper::after {
+  bottom: calc(-01* var(--curve-height));
+}
+
+}
+
+
+/* Hide scrollbar for this component */
+.scroll-container {
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  @keyframes scroll-x {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .animate-scroll-x {
+    animation: scroll-x 30s linear infinite;
+  }
+}
+
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Customize Swiper pagination bullets */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #000 !important; /* ✅ force solid black */
+  opacity: 1 !important;             /* ✅ prevent faded/gray effect */
+  margin: 0 6px !important;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #C3AA45 !important; /* gold active */
+}
+
+
+/* Move pagination bullets lower */
+.custom-swiper .swiper-pagination {
+  margin-top: 20px; /* or try 1.5rem or more */
+  position: relative;
+}
