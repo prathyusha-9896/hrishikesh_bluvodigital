@@ -111,7 +111,7 @@ export default function GlimpsesGallery() {
                 <div className="grid md:grid-cols-2 md:gap-20 gap-4 md:mb-12 mb-0">
                     {/* Left Side: Title */}
                     <div className="flex ">
-                        <h3 className="md:text-[48px] text-[40px] font-bold md:text-center text-left max-w-md">
+                        <h3 className="text-black md:text-[48px] text-[40px] font-bold md:text-center text-left max-w-md">
                         Glimpses of Our <br /> Journey Together
                         </h3>
                     </div>
