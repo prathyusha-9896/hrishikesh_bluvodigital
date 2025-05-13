@@ -15,6 +15,7 @@ const YogaJourney = dynamic(() => import('@/components/YogaJourney'), { ssr: fal
 const YogaPrograms = dynamic(() => import('@/components/YogaPrograms'), { ssr: false });
 const YogicWisdomCarousel = dynamic(() => import('@/components/YogicWisdomCarousel'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
+const Faqs = dynamic(() => import('@/components/FAQS'), { ssr: false });
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         <DiscoverRishikesh/>
         <InfiniteScrollBanner/>
         <Footer/>
+        <Faqs/>
         {/* Add more sections here */}
       </main>
     </>
